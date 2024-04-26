@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista produtos</title>
+</head>
+<body>
+    <script>
+          // 1. Criar a lista de produtos
+    const produtos = ["Computador", "Telefone", "Mouse", "Teclado"];
+
+// 2. Mostrar a quantidade de produtos no console
+console.log(`Quantidade de produtos: ${produtos.length}`);
+
+// 3. Retirar o produto "Mouse" da lista e exibir a lista restante no console
+produtos.splice(produtos.indexOf("Mouse"), 1);
+console.log("Lista de produtos restante:", produtos);
+
+// Buscar produto da lista;
+const produtoProcurado = "Computador";
+const index = produtos.indexOf(produtoProcurado);
+if (index !== -1) {
+  console.log(`O produto "${produtoProcurado}" existe na lista.`);
+  console.log(`Nome do produto: ${produtos[index]}`);
+} else {
+  console.log(`O produto "${produtoProcurado}" não foi encontrado na lista.`);
+}
+
+//  Remover o segundo item da lista
+produtos.splice(1, 1);
+//Mostrando lista atualizada ;
+console.log("Lista de produtos atualizada:", produtos);
+
+    </script>
+</body>
+</html>
